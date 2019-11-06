@@ -1,1 +1,2 @@
 # reaction-timer
+VHDL model for implementation on a Digilent Basys 3 Artix-7 development board. The 7-segment display will show 0000 for three seconds before counting up by 1 every 1ms. If the user presses BTNC, the counter will pause and the display will remain at the current count value. The counter will pause if it reaches 9999. If BTNU is pressed, the counter is reset and the entire process starts over.
