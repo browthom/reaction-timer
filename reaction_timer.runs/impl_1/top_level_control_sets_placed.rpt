@@ -1,0 +1,77 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Mon Nov 11 16:15:07 2019
+| Host         : LAPTOP-683OQKA0 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_level_control_sets_placed.rpt
+| Design       : top_level
+| Device       : xc7a35t
+--------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    10 |
+| Unused register locations in slices containing registers |    30 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      2 |            2 |
+|      4 |            1 |
+|      8 |            4 |
+|    16+ |            3 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             554 |           58 |
+| No           | No                    | Yes                    |               4 |            2 |
+| No           | Yes                   | No                     |              34 |            5 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |              90 |           14 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++---------------------------------+-------------------------------------+------------------+------------------+----------------+
+|           Clock Signal          |            Enable Signal            | Set/Reset Signal | Slice Load Count | Bel Load Count |
++---------------------------------+-------------------------------------+------------------+------------------+----------------+
+|  clk_IBUF_BUFG                  |                                     | reset_deb/R      |                1 |              2 |
+|  clk_IBUF_BUFG                  |                                     | btnu_IBUF        |                1 |              2 |
+|  M1/mux_clk_div/temp_out_reg[1] |                                     |                  |                2 |              4 |
+|  clk_div/bcd_a_temp_reg[3]      | counter/bcd_b_temp                  | btnu_IBUF        |                2 |              8 |
+|  clk_div/bcd_a_temp_reg[3]      | counter/bcd_d_temp                  | btnu_IBUF        |                2 |              8 |
+|  clk_div/bcd_a_temp_reg[3]      | counter/bcd_c_temp                  | btnu_IBUF        |                1 |              8 |
+|  clk_div/bcd_a_temp_reg[3]      | counter/bcd_a_temp                  | btnu_IBUF        |                1 |              8 |
+|  clk_IBUF_BUFG                  |                                     | clk_div/clear    |                5 |             34 |
+|  clk_IBUF_BUFG                  | delay_circuit/delay_temp[0]_i_1_n_0 | btnu_IBUF        |                8 |             58 |
+|  clk_IBUF_BUFG                  |                                     |                  |               56 |            550 |
++---------------------------------+-------------------------------------+------------------+------------------+----------------+
+
+
